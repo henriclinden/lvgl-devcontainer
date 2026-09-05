@@ -15,6 +15,16 @@ LVGL is a free and open-source embedded graphics library that creates beautiful 
 
 ## Quick Start
 
+### 0. Clone the Repository and init Submodules
+
+Since this project uses LVGL as a Git submodule, you need to clone it.
+
+```bash
+git clone https://github.com/henriclinden/lvgl-devcontainer.git
+cd lvgl-devcontainer
+git clone --recursive -b release/v9.1 https://github.com/lvgl/lvgl.git
+```
+
 ### 1. Allow X11/Wayland Access to Container
 
 Before opening the container in VS Code, you need to grant the container access to your display server:
