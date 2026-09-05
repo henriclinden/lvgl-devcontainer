@@ -1,4 +1,4 @@
-![License](https://img.shields.io/github/license/YOUR_USERNAME/YOUR_REPO?color=blue)
+![License](https://img.shields.io/github/license/henriclinden/lvgl-devcontainer?color=blue)
 ![LVGL Version](https://img.shields.io/badge/LVGL-v9.x-orange)
 ![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20Wayland%20%7C%20SDL2-green)
 ![Dev Container](https://img.shields.io/badge/Dev%20Container-Supported-blueviolet)
