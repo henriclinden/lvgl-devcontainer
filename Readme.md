@@ -114,4 +114,6 @@ The container automatically falls back between them based on availability. GPU a
 
 ## License
 
-See the LVGL directory for LVGL licensing information. 
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+Note: The LVGL library included as a submodule has its own licensing - see the `lvgl/` directory for more information. 
