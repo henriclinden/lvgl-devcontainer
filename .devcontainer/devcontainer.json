@@ -1,0 +1,36 @@
+{
+  "name": "LVGL Embedded Linux Dev",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "remoteUser": "vscode",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools",
+        "ms-vscode.cmake-tools",
+        "twxs.cmake"
+      ]
+    }
+  },
+  "mounts": [
+    // Pass Wayland runtime socket
+    "source=${localEnv:XDG_RUNTIME_DIR},target=${localEnv:XDG_RUNTIME_DIR},type=bind",
+    // Pass X11 socket (SDL2 falls back to X11/XWayland if Wayland fails)
+    "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind"
+  ],
+  "containerEnv": {
+    "XDG_RUNTIME_DIR": "${localEnv:XDG_RUNTIME_DIR}",
+    "WAYLAND_DISPLAY": "${localEnv:WAYLAND_DISPLAY}",
+    "DISPLAY": "${localEnv:DISPLAY}",
+    "SDL_VIDEODRIVER": "wayland,x11"
+  },
+  "runArgs": [
+    "--ipc=host",
+    "--device=/dev/dri:/dev/dri",
+    // Grant hardware device access permissions for GPU rendering
+    "--group-add=video",
+    "--group-add=render",
+    "--group-add=993"
+  ]
+}
