@@ -1,6 +1,13 @@
+![License](https://img.shields.io/github/license/YOUR_USERNAME/YOUR_REPO?color=blue)
+![LVGL Version](https://img.shields.io/badge/LVGL-v9.x-orange)
+![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20Wayland%20%7C%20SDL2-green)
+![Dev Container](https://img.shields.io/badge/Dev%20Container-Supported-blueviolet)
+
 # LVGL in Docker Container
 
 This project demonstrates how to set up and develop LVGL (Light and Versatile Graphics Library) applications within a Docker container on Ubuntu, with full GUI support through X11/Wayland forwarding.
+
+![LVGL Dashboard Preview](docs/images/preview.png)
 
 ## Overview
 
